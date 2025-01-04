@@ -1,62 +1,3 @@
---TABLE DEFINITIONS
-
-DROP TABLE DMORG_EMPS_STG;
-DROP TABLE DMORG_EMPS_SCD;
-
-CREATE TABLE DMORG_EMPS_STG (
-    EmployeeID INT PRIMARY KEY,
-    FirstName NVARCHAR(50),
-    LastName NVARCHAR(50),
-    JobTitle NVARCHAR(50),
-    Department NVARCHAR(50),
-    Salary DECIMAL(18, 2),
-    HireDate DATE,
-    BirthDate DATE,
-    Address NVARCHAR(100),
-    City NVARCHAR(50),
-    State NVARCHAR(50),
-    ZipCode NVARCHAR(10),
-    Country NVARCHAR(50),
-    PhoneNumber NVARCHAR(20),
-    Email NVARCHAR(50),
-    ManagerID INT,
-    Status NVARCHAR(20),
-    Gender NVARCHAR(10),
-    MaritalStatus NVARCHAR(20),
-    Nationality NVARCHAR(50),
-    Education NVARCHAR(50),
-    Experience INT
-);
-
-
-CREATE TABLE DMORG_EMPS_SCD (
-    EmployeeID INT,
-    FirstName NVARCHAR(50),
-    LastName NVARCHAR(50),
-    JobTitle NVARCHAR(50),
-    Department NVARCHAR(50),
-    Salary DECIMAL(18, 2),
-    HireDate DATE,
-    BirthDate DATE,
-    Address NVARCHAR(100),
-    City NVARCHAR(50),
-    State NVARCHAR(50),
-    ZipCode NVARCHAR(10),
-    Country NVARCHAR(50),
-    PhoneNumber NVARCHAR(20),
-    Email NVARCHAR(50),
-    ManagerID INT,
-    Status NVARCHAR(20),
-    Gender NVARCHAR(10),
-    MaritalStatus NVARCHAR(20),
-    Nationality NVARCHAR(50),
-    Education NVARCHAR(50),
-    Experience INT,
-    STRT_DT DATE,
-    END_DT DATE
-);
-
-
 --SAMPLE DATA
 
 INSERT INTO DMORG_EMPS_STG (EmployeeID, FirstName, LastName, JobTitle, Department, Salary, HireDate, BirthDate, Address, City, State, ZipCode, Country, PhoneNumber, Email, ManagerID, Status, Gender, MaritalStatus, Nationality, Education, Experience)
@@ -93,13 +34,4 @@ VALUES
 (18, 'Paula', 'Walker', 'Customer Support', 'Support', 50000, '2020-08-25', '1991-09-15', '210 Willow St', 'CityR', 'StateR', '33456', 'CountryR', '890-123-4567', 'paula.walker@example.com', 118, 'Active', 'Female', 'Single', 'CountryR', 'Bachelors', 2),
 (19, 'Quincy', 'Hall', 'Sales Representative', 'Sales', 58000, '2019-05-30', '1989-10-20', '432 Redwood St', 'CityS', 'StateS', '66789', 'CountryS', '901-234-5678', 'quincy.hall@example.com', 119, 'Active', 'Male', 'Single', 'CountryS', 'Bachelors', 4),
 (20, 'Rachel', 'Young', 'HR Specialist', 'HR', 62000, '2018-02-14', '1986-11-25', '654 Aspen St', 'CityT', 'StateT', '99023', 'CountryT', '012-345-6789', 'rachel.young@example.com', 120, 'Active', 'Female', 'Married', 'CountryT', 'Bachelors', 6);
-
-
-
-DROP PROCEDURE SCD_LOADER;
-
-EXEC SCD_LOADER 
-    @i_STG_TABLE_NAME = 'DMORG_EMPS_STG', 
-    @i_SCD_TABLE_NAME = 'DMORG_EMPS_SCD', 
-    @i_KEY = 'EmployeeID';
 
