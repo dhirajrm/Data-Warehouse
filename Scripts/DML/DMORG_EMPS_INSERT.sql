@@ -2,18 +2,18 @@
 
 INSERT INTO DMORG_EMPS_STG (EmployeeID, FirstName, LastName, JobTitle, Department, Salary, HireDate, BirthDate, Address, City, State, ZipCode, Country, PhoneNumber, Email, ManagerID, Status, Gender, MaritalStatus, Nationality, Education, Experience)
 VALUES 
-(1, 'John', 'Doe', 'Software Engineer', 'IT', 60000, '2020-01-15', '1990-05-20', '123 Main St', 'CityA', 'StateA', '12345', 'CountryA', '123-456-7890', 'john.doe@example.com', 101, 'Active', 'Male', 'Single', 'CountryA', 'Bachelors', 5),
-(2, 'Jane', 'Smith', 'Senior Data Analyst', 'IT', 55000, '2019-03-10', '1988-07-15', '456 Elm St', 'CityB', 'StateB', '67890', 'CountryB', '234-567-8901', 'jane.smith@example.com', 102, 'Active', 'Female', 'Married', 'CountryB', 'Masters', 7),
+(1, 'John', 'Doe', 'Software Engineer', 'IT', 70000, '2020-01-15', '1990-05-20', '123 Main St', 'CityA', 'StateA', '12345', 'CountryA', '123-456-7890', 'john.doe@example.com', 101, 'Active', 'Male', 'Single', 'CountryA', 'Bachelors', 5),
+(2, 'Jane', 'Smith', 'Senior Data Analyst', 'IT', 67000, '2019-03-10', '1988-07-15', '456 Elm St', 'CityB', 'StateB', '67890', 'CountryB', '234-567-8901', 'jane.smith@example.com', 102, 'Active', 'Female', 'Married', 'CountryB', 'Masters', 7),
 (3, 'Alice', 'Johnson', 'Project Manager', 'IT', 75000, '2018-06-25', '1985-09-10', '789 Pine St', 'CityC', 'StateC', '11223', 'CountryC', '345-678-9012', 'alice.johnson@example.com', 103, 'Active', 'Female', 'Married', 'CountryC', 'MBA', 10),
-(4, 'Bob', 'Brown', 'QA Engineer', 'IT', 50000, '2021-11-05', '1992-11-25', '321 Oak St', 'CityD', 'StateD', '44556', 'CountryD', '456-789-0123', 'bob.brown@example.com', 104, 'Active', 'Male', 'Single', 'CountryD', 'Bachelors', 3);
+(4, 'Bob', 'Brown', 'QA Lead', 'IT', 650000, '2021-11-05', '1992-11-25', '321 Oak St', 'CityD', 'StateD', '44556', 'CountryD', '456-789-0123', 'bob.brown@example.com', 104, 'Active', 'Male', 'Single', 'CountryD', 'Bachelors', 3);
 
 
 INSERT INTO DMORG_EMPS_SCD (EmployeeID, FirstName, LastName, JobTitle, Department, Salary, HireDate, BirthDate, Address, City, State, ZipCode, Country, PhoneNumber, Email, ManagerID, Status, Gender, MaritalStatus, Nationality, Education, Experience, STRT_DT, END_DT)
 VALUES 
-(1, 'John', 'Doe', 'Software Engineer', 'IT', 60000, '2020-01-15', '1990-05-20', '123 Main St', 'CityA', 'StateA', '12345', 'CountryA', '123-456-7890', 'john.doe@example.com', 101, 'Active', 'Male', 'Single', 'CountryA', 'Bachelors', 5, '2020-01-15', NULL),
-(2, 'Jane', 'Smith', 'Data Analyst', 'IT', 55000, '2019-03-10', '1988-07-15', '456 Elm St', 'CityB', 'StateB', '67890', 'CountryB', '234-567-8901', 'jane.smith@example.com', 102, 'Active', 'Female', 'Married', 'CountryB', 'Masters', 7, '2019-03-10', NULL),
-(3, 'Alice', 'Johnson', 'Project Manager', 'IT', 75000, '2018-06-25', '1985-09-10', '789 Pine St', 'CityC', 'StateC', '11223', 'CountryC', '345-678-9012', 'alice.johnson@example.com', 103, 'Active', 'Female', 'Married', 'CountryC', 'MBA', 10, '2018-06-25', NULL),
-(4, 'Bob', 'Brown', 'QA Engineer', 'IT', 50000, '2021-11-05', '1992-11-25', '321 Oak St', 'CityD', 'StateD', '44556', 'CountryD', '456-789-0123', 'bob.brown@example.com', 104, 'Active', 'Male', 'Single', 'CountryD', 'Bachelors', 3, '2021-11-05', NULL);
+(1, 'John', 'Doe', 'Software Engineer', 'IT', 60000, '2020-01-15', '1990-05-20', '123 Main St', 'CityA', 'StateA', '12345', 'CountryA', '123-456-7890', 'john.doe@example.com', 101, 'Active', 'Male', 'Single', 'CountryA', 'Bachelors', 5, '2020-01-15', '9999-12-31'),
+(2, 'Jane', 'Smith', 'Data Analyst', 'IT', 55000, '2019-03-10', '1988-07-15', '456 Elm St', 'CityB', 'StateB', '67890', 'CountryB', '234-567-8901', 'jane.smith@example.com', 102, 'Active', 'Female', 'Married', 'CountryB', 'Masters', 7, '2019-03-10', '9999-12-31'),
+(3, 'Alice', 'Johnson', 'Project Manager', 'IT', 75000, '2018-06-25', '1985-09-10', '789 Pine St', 'CityC', 'StateC', '11223', 'CountryC', '345-678-9012', 'alice.johnson@example.com', 103, 'Active', 'Female', 'Married', 'CountryC', 'MBA', 10, '2018-06-25', '9999-12-31'),
+(4, 'Bob', 'Brown', 'QA Engineer', 'IT', 50000, '2021-11-05', '1992-11-25', '321 Oak St', 'CityD', 'StateD', '44556', 'CountryD', '456-789-0123', 'bob.brown@example.com', 104, 'Active', 'Male', 'Single', 'CountryD', 'Bachelors', 3, '2021-11-05', '9999-12-31');
 
 
 INSERT INTO DMORG_EMPS_STG (EmployeeID, FirstName, LastName, JobTitle, Department, Salary, HireDate, BirthDate, Address, City, State, ZipCode, Country, PhoneNumber, Email, ManagerID, Status, Gender, MaritalStatus, Nationality, Education, Experience)

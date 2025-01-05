@@ -20,5 +20,7 @@ CREATE TABLE DMORG_EMPS_SCD (
     MaritalStatus NVARCHAR(20),
     Nationality NVARCHAR(50),
     Education NVARCHAR(50),
-    Experience INT
+    Experience INT,
+    STRT_DT DATE,
+    END_DT DATE
 );
