@@ -34,3 +34,15 @@ EXEC SCD_LOADER
     @i_STG_TABLE_NAME = 'DMORG_EMPS_STG', 
     @i_SCD_TABLE_NAME = 'DMORG_EMPS_SCD', 
     @i_KEY = 'EmployeeID';
+
+
+-- Incase if you need to drop and recreate the tables and stored procedures, you can run the below scripts
+DROP PROCEDURE IF EXISTS SCD_LOADER;
+GO
+
+TRUNCATE TABLE DMORG_EMPS_STG;
+TRUNCATE TABLE DMORG_EMPS_SCD;
+
+UPDATE DMORG_EMPS_STG
+SET SALARY = 80000
+WHERE EmployeeID = 2;
